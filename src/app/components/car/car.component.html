@@ -1,0 +1,28 @@
+<div *ngIf="dataLoaded==false" class="spinner-border text-success" role="status">
+    <span class="visually-hidden">Loading...</span>">
+  </div>
+  <ul *ngIf="dataLoaded==true" class="list-group">
+    <li class="list-group-item active" aria-current="true" style="text-align:center">CARS</li>
+<table>
+    <thead>
+        <tr>
+            <th>Car Id</th>
+            <th>Car Name</th>
+            <th>Brand Name</th>
+            <th>Color Name</th>
+            <th>Model Year</th>
+            <th>Daily Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let car of cars">
+            <td>{{car.id}}</td>
+            <td>{{car.description}}</td>
+            <td>{{car.brandName}}</td>
+            <td>{{car.colorName}}</td>  
+            <td>{{car.modelYear}}</td>
+            <td>{{car.dailyPrice}} TL</td>
+        </tr>
+    </tbody>
+    
+</table>
